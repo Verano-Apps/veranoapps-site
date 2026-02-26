@@ -1,0 +1,140 @@
+const I18N = {
+    "pt-BR": {
+        "ui.theme": "Tema",
+
+        "nav.apps": "Apps",
+        "nav.about": "Sobre",
+        "nav.contact": "Contato",
+
+        "hero.kicker": "Estúdio independente",
+        "hero.title": "Apps minimalistas.\nFeitos com intenção.",
+        "hero.subtitle":
+            "Produtos offline-first, privados e sem distrações — criados para foco e disciplina.",
+        "hero.ctaPrimary": "Ver apps",
+        "hero.ctaSecondary": "Sobre a Verano",
+        "hero.note": "Sem login. Sem anúncios. Sem coleta de dados.",
+
+        "apps.title": "Apps",
+        "apps.subtitle": "Produtos enxutos, feitos para durar.",
+        "apps.marmitrack.badge": "Android • Offline-first",
+        "apps.marmitrack.desc":
+            "Controle alimentar minimalista com marmitas, metas e progresso diário — totalmente offline.",
+        "apps.marmitrack.play": "Em breve na Google Play →",
+
+        "about.title": "Sobre",
+        "about.subtitle": "Um estúdio solo construindo software claro, privado e consistente.",
+        "about.principles.title": "Princípios",
+        "about.principles.p1": "Minimalismo sem distrações",
+        "about.principles.p2": "Offline-first e privacidade",
+        "about.principles.p3": "Design limpo e funcional",
+        "about.story.title": "História",
+        "about.story.text":
+            "Verano Apps nasceu para criar ferramentas pessoais — simples, rápidas e sem “ruído”. O objetivo é construir um portfólio sólido de produtos reais, do zero ao lançamento.",
+
+        "contact.title": "Contato",
+        "contact.subtitle": "Feedback e oportunidades são bem-vindos.",
+        "contact.emailLabel": "Email:",
+
+        "footer.tagline": "Minimal • Offline-first • Private",
+    },
+
+    en: {
+        "ui.theme": "Theme",
+
+        "nav.apps": "Apps",
+        "nav.about": "About",
+        "nav.contact": "Contact",
+
+        "hero.kicker": "Independent app studio",
+        "hero.title": "Minimal apps.\nBuilt with intention.",
+        "hero.subtitle":
+            "Offline-first, private, distraction-free products — designed for focus and discipline.",
+        "hero.ctaPrimary": "View apps",
+        "hero.ctaSecondary": "About Verano",
+        "hero.note": "No login. No ads. No data collection.",
+
+        "apps.title": "Apps",
+        "apps.subtitle": "Focused products, built to last.",
+        "apps.marmitrack.badge": "Android • Offline-first",
+        "apps.marmitrack.desc":
+            "Minimal food tracking with meals, goals, and daily progress — fully offline.",
+        "apps.marmitrack.play": "Coming soon to Google Play →",
+
+        "about.title": "About",
+        "about.subtitle": "A solo studio building clear, private, consistent software.",
+        "about.principles.title": "Principles",
+        "about.principles.p1": "Minimalism without distractions",
+        "about.principles.p2": "Offline-first and privacy",
+        "about.principles.p3": "Clean, functional design",
+        "about.story.title": "Story",
+        "about.story.text":
+            "Verano Apps exists to build personal tools—simple, fast, and noise-free. The goal is to create a strong portfolio of real products, from zero to launch.",
+
+        "contact.title": "Contact",
+        "contact.subtitle": "Feedback and opportunities are welcome.",
+        "contact.emailLabel": "Email:",
+
+        "footer.tagline": "Minimal • Offline-first • Private",
+    },
+};
+
+const STORAGE = {
+    lang: "verano_lang",
+    theme: "verano_theme",
+};
+
+function getPreferredTheme() {
+    const saved = localStorage.getItem(STORAGE.theme);
+    if (saved === "light" || saved === "dark") return saved;
+
+    // fallback: system preference
+    const prefersDark = window.matchMedia?.("(prefers-color-scheme: dark)")?.matches;
+    return prefersDark ? "dark" : "light";
+}
+
+function applyTheme(theme) {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem(STORAGE.theme, theme);
+}
+
+function setLanguage(lang) {
+    const dict = I18N[lang] || I18N.en;
+
+    document.documentElement.lang = lang === "pt-BR" ? "pt-BR" : "en";
+    localStorage.setItem(STORAGE.lang, lang);
+
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.getAttribute("data-i18n");
+        const value = dict[key];
+        if (typeof value !== "string") return;
+
+        // Support \n in titles (hero)
+        el.textContent = value;
+    });
+
+    const pill = document.getElementById("langPill");
+    if (pill) pill.textContent = lang === "pt-BR" ? "PT" : "EN";
+}
+
+function init() {
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Theme init
+    applyTheme(getPreferredTheme());
+    document.getElementById("themeToggle")?.addEventListener("click", () => {
+        const current = document.documentElement.getAttribute("data-theme") || "light";
+        applyTheme(current === "dark" ? "light" : "dark");
+    });
+
+    // Language init
+    const savedLang = localStorage.getItem(STORAGE.lang);
+    const defaultLang = savedLang || "pt-BR";
+    setLanguage(defaultLang);
+
+    document.getElementById("langToggle")?.addEventListener("click", () => {
+        const current = localStorage.getItem(STORAGE.lang) || defaultLang;
+        setLanguage(current === "pt-BR" ? "en" : "pt-BR");
+    });
+}
+
+init();

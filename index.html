@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verano Apps</title>
+    <meta name="description" content="Verano Apps — minimal, offline-first mobile apps." />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="container topbar__inner">
+            <a class="brand" href="#top" aria-label="Verano Apps">
+                <img class="brand__logo" src="assets/logo.png" alt="Verano Apps logo" />
+                <span class="brand__name">Verano Apps</span>
+            </a>
+
+            <div class="topbar__actions">
+                <nav class="nav">
+                    <a class="link subtle" href="#apps" data-i18n="nav.apps">Apps</a>
+                    <a class="link subtle" href="#about" data-i18n="nav.about">Sobre</a>
+                    <a class="link subtle" href="#contact" data-i18n="nav.contact">Contato</a>
+                </nav>
+
+                <div class="toggles">
+                    <button class="pill" id="themeToggle" type="button" aria-label="Toggle theme">
+                        <span class="pill__icon" aria-hidden="true">◐</span>
+                        <span class="pill__text" data-i18n="ui.theme">Tema</span>
+                    </button>
+
+                    <button class="pill" id="langToggle" type="button" aria-label="Toggle language">
+                        <span class="pill__icon" aria-hidden="true">⌁</span>
+                        <span class="pill__text" id="langPill">PT</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="top">
+        <section class="hero">
+            <div class="container">
+                <p class="kicker" data-i18n="hero.kicker">Estúdio independente</p>
+
+                <h1 class="hero__title" data-i18n="hero.title">
+                    Apps minimalistas.<br />Feitos com intenção.
+                </h1>
+
+                <p class="hero__subtitle" data-i18n="hero.subtitle">
+                    Produtos offline-first, privados e sem distrações — criados para foco e disciplina.
+                </p>
+
+                <div class="hero__cta">
+                    <a class="btn" href="#apps" data-i18n="hero.ctaPrimary">Ver apps</a>
+                    <a class="btn ghost" href="#about" data-i18n="hero.ctaSecondary">Sobre a Verano</a>
+                </div>
+
+                <div class="note" data-i18n="hero.note">
+                    Sem login. Sem anúncios. Sem coleta de dados.
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="apps">
+            <div class="container">
+                <div class="section__head">
+                    <h2 class="section__title" data-i18n="apps.title">Apps</h2>
+                    <p class="section__subtitle" data-i18n="apps.subtitle">
+                        Produtos enxutos, feitos para durar.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card__meta">
+                        <span class="badge" data-i18n="apps.marmitrack.badge">Android • Offline-first</span>
+                    </div>
+
+                    <h3 class="card__title">Marmitrack</h3>
+
+                    <p class="card__text" data-i18n="apps.marmitrack.desc">
+                        Controle alimentar minimalista com marmitas, metas e progresso diário — totalmente offline.
+                    </p>
+
+                    <div class="card__actions">
+                        <!-- Troque o href quando publicar -->
+                        <a class="link" href="#" aria-disabled="true" data-i18n="apps.marmitrack.play">
+                            Em breve na Google Play →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="about">
+            <div class="container">
+                <div class="section__head">
+                    <h2 class="section__title" data-i18n="about.title">Sobre</h2>
+                    <p class="section__subtitle" data-i18n="about.subtitle">
+                        Um estúdio solo construindo software claro, privado e consistente.
+                    </p>
+                </div>
+
+                <div class="grid">
+                    <div class="card">
+                        <h3 class="card__title" data-i18n="about.principles.title">Princípios</h3>
+                        <ul class="list">
+                            <li data-i18n="about.principles.p1">Minimalismo sem distrações</li>
+                            <li data-i18n="about.principles.p2">Offline-first e privacidade</li>
+                            <li data-i18n="about.principles.p3">Design limpo e funcional</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card__title" data-i18n="about.story.title">História</h3>
+                        <p class="card__text" data-i18n="about.story.text">
+                            Verano Apps nasceu para criar ferramentas pessoais — simples, rápidas e sem “ruído”.
+                            O objetivo é construir um portfólio sólido de produtos reais, do zero ao lançamento.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="contact">
+            <div class="container">
+                <div class="section__head">
+                    <h2 class="section__title" data-i18n="contact.title">Contato</h2>
+                    <p class="section__subtitle" data-i18n="contact.subtitle">
+                        Feedback e oportunidades são bem-vindos.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <p class="card__text">
+                        <span data-i18n="contact.emailLabel">Email:</span>
+                        <a class="link" href="mailto:veranoapps@gmail.com">veranoapps@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <span class="muted">© <span id="year"></span> Verano Apps</span>
+            <span class="muted" data-i18n="footer.tagline">Minimal • Offline-first • Private</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

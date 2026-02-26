@@ -44,7 +44,7 @@ const I18N = {
         "contact.subtitle": "Feedback e oportunidades são bem-vindos.",
         "contact.emailLabel": "Email:",
 
-        "footer.tagline": "Minimal • Private • Useful",
+        "footer.tagline": "Minimalista • Privado • Útil",
     },
 
     en: {

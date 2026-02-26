@@ -17,6 +17,15 @@
     --ghost-bg: transparent;
     --ghost-text: #111111;
     --ghost-border: #e5e5e3;
+
+    /* Status colors (sutis) */
+    --status-inprogress-bg: rgba(245, 158, 11, 0.12);
+    --status-inprogress-border: rgba(245, 158, 11, 0.30);
+    --status-inprogress-text: #8a5a00;
+
+    --status-published-bg: rgba(34, 197, 94, 0.12);
+    --status-published-border: rgba(34, 197, 94, 0.30);
+    --status-published-text: #0f6a2c;
 }
 
 html[data-theme="dark"] {
@@ -37,6 +46,14 @@ html[data-theme="dark"] {
     --ghost-bg: transparent;
     --ghost-text: #f0f0f0;
     --ghost-border: #2a2a2f;
+
+    --status-inprogress-bg: rgba(245, 158, 11, 0.16);
+    --status-inprogress-border: rgba(245, 158, 11, 0.32);
+    --status-inprogress-text: #ffd08a;
+
+    --status-published-bg: rgba(34, 197, 94, 0.16);
+    --status-published-border: rgba(34, 197, 94, 0.32);
+    --status-published-text: #a6f4c5;
 }
 
 * {
@@ -46,6 +63,13 @@ html[data-theme="dark"] {
 html,
 body {
     height: 100%;
+}
+
+/* ✅ Scroll suave */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 78px;
+    /* compensa header sticky */
 }
 
 body {
@@ -82,21 +106,30 @@ body {
 .brand {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     text-decoration: none;
     color: var(--text);
     user-select: none;
 }
 
+/* ✅ Logo mais visível + arredondada */
 .brand__logo {
-    height: 26px;
-    width: auto;
+    height: 34px;
+    /* maior */
+    width: 34px;
+    /* força quadrado para ficar redonda */
+    object-fit: cover;
+    border-radius: 12px;
+    /* arredondado premium */
+    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.35);
     display: block;
 }
 
 .brand__name {
     font-weight: 600;
     letter-spacing: -0.02em;
+    font-size: 15px;
 }
 
 .topbar__actions {
@@ -144,8 +177,8 @@ body {
 }
 
 .pill__icon {
-    font-size: 12px;
-    opacity: 0.85;
+    font-size: 13px;
+    opacity: 0.9;
 }
 
 .pill__text {
@@ -252,7 +285,11 @@ body {
 }
 
 .card__meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     margin-bottom: 10px;
+    flex-wrap: wrap;
 }
 
 .badge {
@@ -262,6 +299,39 @@ body {
     border-radius: 999px;
     padding: 6px 10px;
     background: color-mix(in srgb, var(--card) 70%, transparent);
+}
+
+/* ✅ Status tag (bolinha + label) */
+.status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 999px;
+    padding: 6px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    border: 1px solid;
+}
+
+.status .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: currentColor;
+    opacity: 0.9;
+}
+
+.status.inprogress {
+    background: var(--status-inprogress-bg);
+    border-color: var(--status-inprogress-border);
+    color: var(--status-inprogress-text);
+}
+
+.status.published {
+    background: var(--status-published-bg);
+    border-color: var(--status-published-border);
+    color: var(--status-published-text);
 }
 
 .card__title {

@@ -21,12 +21,15 @@ const I18N = {
             "Controle alimentar minimalista com marmitas, metas e progresso diário — totalmente offline.",
         "apps.marmitrack.play": "Em breve na Google Play →",
 
+        "status.inprogress": "Em produção",
+        "status.published": "Publicado",
+
         "about.title": "Sobre",
         "about.subtitle": "Um estúdio solo construindo software claro, privado e consistente.",
         "about.principles.title": "Princípios",
-        "about.principles.p1": "Minimalismo sem distrações",
-        "about.principles.p2": "Offline-first e privacidade",
-        "about.principles.p3": "Design limpo e funcional",
+        "about.principles.p1": "Minimalismo sem distrações.",
+        "about.principles.p2": "Offline-first e privacidade.",
+        "about.principles.p3": "Design limpo e funcional.",
         "about.story.title": "História",
         "about.story.text":
             "Verano Apps nasceu para criar ferramentas pessoais — simples, rápidas e sem “ruído”. O objetivo é construir um portfólio sólido de produtos reais, do zero ao lançamento.",
@@ -60,6 +63,9 @@ const I18N = {
             "Minimal food tracking with meals, goals, and daily progress — fully offline.",
         "apps.marmitrack.play": "Coming soon to Google Play →",
 
+        "status.inprogress": "In progress",
+        "status.published": "Published",
+
         "about.title": "About",
         "about.subtitle": "A solo studio building clear, private, consistent software.",
         "about.principles.title": "Principles",
@@ -86,8 +92,6 @@ const STORAGE = {
 function getPreferredTheme() {
     const saved = localStorage.getItem(STORAGE.theme);
     if (saved === "light" || saved === "dark") return saved;
-
-    // fallback: system preference
     const prefersDark = window.matchMedia?.("(prefers-color-scheme: dark)")?.matches;
     return prefersDark ? "dark" : "light";
 }
@@ -107,8 +111,6 @@ function setLanguage(lang) {
         const key = el.getAttribute("data-i18n");
         const value = dict[key];
         if (typeof value !== "string") return;
-
-        // Support \n in titles (hero)
         el.textContent = value;
     });
 
@@ -119,14 +121,14 @@ function setLanguage(lang) {
 function init() {
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Theme init
+    // Theme init + toggle
     applyTheme(getPreferredTheme());
     document.getElementById("themeToggle")?.addEventListener("click", () => {
         const current = document.documentElement.getAttribute("data-theme") || "light";
         applyTheme(current === "dark" ? "light" : "dark");
     });
 
-    // Language init
+    // Language init + toggle
     const savedLang = localStorage.getItem(STORAGE.lang);
     const defaultLang = savedLang || "pt-BR";
     setLanguage(defaultLang);

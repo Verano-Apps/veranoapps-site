@@ -1,11 +1,15 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="light">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Verano Apps</title>
     <meta name="description" content="Verano Apps — minimal, offline-first mobile apps." />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -34,7 +38,7 @@
                     </button>
 
                     <button class="pill" id="langToggle" type="button" aria-label="Toggle language">
-                        <span class="pill__icon" aria-hidden="true">⌁</span>
+                        <span class="pill__icon" aria-hidden="true">🌐</span>
                         <span class="pill__text" id="langPill">PT</span>
                     </button>
                 </div>
@@ -78,6 +82,12 @@
                 <div class="card">
                     <div class="card__meta">
                         <span class="badge" data-i18n="apps.marmitrack.badge">Android • Offline-first</span>
+
+                        <!-- STATUS (mude a classe para published quando lançar) -->
+                        <span class="status inprogress" id="marmitrackStatus">
+                            <span class="dot" aria-hidden="true"></span>
+                            <span data-i18n="status.inprogress">Em produção</span>
+                        </span>
                     </div>
 
                     <h3 class="card__title">Marmitrack</h3>
@@ -110,8 +120,8 @@
                         <h3 class="card__title" data-i18n="about.principles.title">Princípios</h3>
                         <ul class="list">
                             <li data-i18n="about.principles.p1">Minimalismo sem distrações</li>
-                            <li data-i18n="about.principles.p2">Offline-first e privacidade</li>
-                            <li data-i18n="about.principles.p3">Design limpo e funcional</li>
+                            <li data-i18n="about.principles.p2">Offline-first e privacidade.</li>
+                            <li data-i18n="about.principles.p3">Design limpo e funcional.</li>
                         </ul>
                     </div>
 

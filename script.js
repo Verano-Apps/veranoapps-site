@@ -8,28 +8,28 @@ const I18N = {
 
         "hero.kicker": "Estúdio independente",
         "hero.title": "Apps minimalistas.\nFeitos com intenção.",
-        "hero.subtitle":
-            "Produtos offline-first, privados e sem distrações — criados para foco e disciplina.",
+        "hero.subtitle": "Produtos mobile focados em clareza, privacidade e utilidade.",
         "hero.ctaPrimary": "Ver apps",
         "hero.ctaSecondary": "Sobre a Verano",
         "hero.note": "Sem login. Sem anúncios. Sem coleta de dados.",
 
         "apps.title": "Apps",
-        "apps.subtitle": "Produtos enxutos, feitos para durar.",
+        "apps.subtitle": "Produtos enxutos, consistentes e feitos para durar.",
         "apps.marmitrack.badge": "Android • Offline-first",
         "apps.marmitrack.desc":
-            "Controle alimentar minimalista com marmitas, metas e progresso diário — totalmente offline.",
+            "Controle alimentar minimalista com marmitas, metas e progresso diário — offline-first.",
         "apps.marmitrack.play": "Em breve na Google Play →",
 
         "status.inprogress": "Em produção",
         "status.published": "Publicado",
 
         "about.title": "Sobre",
-        "about.subtitle": "Um estúdio solo construindo software claro, privado e consistente.",
+        "about.subtitle":
+            "Um estúdio solo construindo software claro, privado e consistente — com foco em produto.",
         "about.principles.title": "Princípios",
-        "about.principles.p1": "Minimalismo sem distrações.",
-        "about.principles.p2": "Offline-first e privacidade.",
-        "about.principles.p3": "Design limpo e funcional.",
+        "about.principles.p1": "Minimalismo sem distrações",
+        "about.principles.p2": "Privacidade por padrão",
+        "about.principles.p3": "Design limpo e funcional",
         "about.story.title": "História",
         "about.story.text":
             "Verano Apps nasceu para criar ferramentas pessoais — simples, rápidas e sem “ruído”. O objetivo é construir um portfólio sólido de produtos reais, do zero ao lançamento.",
@@ -38,7 +38,7 @@ const I18N = {
         "contact.subtitle": "Feedback e oportunidades são bem-vindos.",
         "contact.emailLabel": "Email:",
 
-        "footer.tagline": "Minimal • Offline-first • Private",
+        "footer.tagline": "Minimal • Private • Useful",
     },
 
     en: {
@@ -50,27 +50,27 @@ const I18N = {
 
         "hero.kicker": "Independent app studio",
         "hero.title": "Minimal apps.\nBuilt with intention.",
-        "hero.subtitle":
-            "Offline-first, private, distraction-free products — designed for focus and discipline.",
+        "hero.subtitle": "Mobile products focused on clarity, privacy, and usefulness.",
         "hero.ctaPrimary": "View apps",
         "hero.ctaSecondary": "About Verano",
         "hero.note": "No login. No ads. No data collection.",
 
         "apps.title": "Apps",
-        "apps.subtitle": "Focused products, built to last.",
+        "apps.subtitle": "Focused products, consistent and built to last.",
         "apps.marmitrack.badge": "Android • Offline-first",
         "apps.marmitrack.desc":
-            "Minimal food tracking with meals, goals, and daily progress — fully offline.",
+            "Minimal food tracking with meals, goals, and daily progress — offline-first.",
         "apps.marmitrack.play": "Coming soon to Google Play →",
 
         "status.inprogress": "In progress",
         "status.published": "Published",
 
         "about.title": "About",
-        "about.subtitle": "A solo studio building clear, private, consistent software.",
+        "about.subtitle":
+            "A solo studio building clear, private, consistent software — product-first.",
         "about.principles.title": "Principles",
         "about.principles.p1": "Minimalism without distractions",
-        "about.principles.p2": "Offline-first and privacy",
+        "about.principles.p2": "Privacy by default",
         "about.principles.p3": "Clean, functional design",
         "about.story.title": "Story",
         "about.story.text":
@@ -80,7 +80,7 @@ const I18N = {
         "contact.subtitle": "Feedback and opportunities are welcome.",
         "contact.emailLabel": "Email:",
 
-        "footer.tagline": "Minimal • Offline-first • Private",
+        "footer.tagline": "Minimal • Private • Useful",
     },
 };
 
@@ -121,14 +121,12 @@ function setLanguage(lang) {
 function init() {
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Theme init + toggle
     applyTheme(getPreferredTheme());
     document.getElementById("themeToggle")?.addEventListener("click", () => {
         const current = document.documentElement.getAttribute("data-theme") || "light";
         applyTheme(current === "dark" ? "light" : "dark");
     });
 
-    // Language init + toggle
     const savedLang = localStorage.getItem(STORAGE.lang);
     const defaultLang = savedLang || "pt-BR";
     setLanguage(defaultLang);

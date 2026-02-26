@@ -65,11 +65,10 @@ body {
     height: 100%;
 }
 
-/* ✅ Scroll suave */
+/* Smooth scroll + header offset */
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 78px;
-    /* compensa header sticky */
 }
 
 body {
@@ -112,15 +111,11 @@ body {
     user-select: none;
 }
 
-/* ✅ Logo mais visível + arredondada */
 .brand__logo {
     height: 34px;
-    /* maior */
     width: 34px;
-    /* força quadrado para ficar redonda */
     object-fit: cover;
     border-radius: 12px;
-    /* arredondado premium */
     border: 1px solid var(--line);
     background: rgba(255, 255, 255, 0.35);
     display: block;
@@ -301,7 +296,6 @@ body {
     background: color-mix(in srgb, var(--card) 70%, transparent);
 }
 
-/* ✅ Status tag (bolinha + label) */
 .status {
     display: inline-flex;
     align-items: center;

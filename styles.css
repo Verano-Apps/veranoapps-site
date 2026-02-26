@@ -340,6 +340,13 @@ body {
     line-height: 1.7;
 }
 
+/* NOVO: texto secundário menor (ex: privacidade do app) */
+.card__text.small {
+    margin-top: 10px;
+    font-size: 13px;
+    opacity: 0.9;
+}
+
 .card__actions {
     margin-top: 14px;
 }
@@ -373,6 +380,23 @@ body {
     color: var(--muted);
 }
 
+:focus-visible {
+    outline: 2px solid color-mix(in srgb, var(--text) 22%, transparent);
+    outline-offset: 3px;
+    border-radius: 12px;
+}
+
+.btn,
+.pill,
+.card {
+    transition: filter 120ms ease, transform 120ms ease, border-color 120ms ease;
+}
+
+.btn:active,
+.pill:active {
+    transform: translateY(1px);
+}
+
 @media (min-width: 860px) {
     .nav {
         display: flex;
@@ -381,4 +405,22 @@ body {
     .grid {
         grid-template-columns: 1fr 1fr;
     }
+}
+
+.pill__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    font-size: 13px;
+    opacity: 0.9;
+    line-height: 1;
+}
+
+.pill__icon--lang {
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    font-size: 12px;
+    opacity: 0.85;
 }

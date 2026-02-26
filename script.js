@@ -11,13 +11,19 @@ const I18N = {
         "hero.subtitle": "Produtos mobile focados em clareza, privacidade e utilidade.",
         "hero.ctaPrimary": "Ver apps",
         "hero.ctaSecondary": "Sobre a Verano",
-        "hero.note": "Sem login. Sem anúncios. Sem coleta de dados.",
+
+        // ALTERADO: mensagem de marca (não promessa técnica eterna)
+        "hero.note": "Privacidade por padrão. Clareza sempre. Sem ruído.",
 
         "apps.title": "Apps",
         "apps.subtitle": "Produtos enxutos, consistentes e feitos para durar.",
         "apps.marmitrack.badge": "Android • Offline-first",
         "apps.marmitrack.desc":
             "Controle alimentar minimalista com marmitas, metas e progresso diário — offline-first.",
+
+        // NOVO: promessa técnica por app
+        "apps.marmitrack.privacy": "Sem login. Sem anúncios. Sem coleta de dados.",
+
         "apps.marmitrack.play": "Em breve na Google Play →",
 
         "status.inprogress": "Em produção",
@@ -53,13 +59,19 @@ const I18N = {
         "hero.subtitle": "Mobile products focused on clarity, privacy, and usefulness.",
         "hero.ctaPrimary": "View apps",
         "hero.ctaSecondary": "About Verano",
-        "hero.note": "No login. No ads. No data collection.",
+
+        // ALTERADO
+        "hero.note": "Privacy by default. Always clear. No noise.",
 
         "apps.title": "Apps",
         "apps.subtitle": "Focused products, consistent and built to last.",
         "apps.marmitrack.badge": "Android • Offline-first",
         "apps.marmitrack.desc":
             "Minimal food tracking with meals, goals, and daily progress — offline-first.",
+
+        // NOVO
+        "apps.marmitrack.privacy": "No login. No ads. No data collection.",
+
         "apps.marmitrack.play": "Coming soon to Google Play →",
 
         "status.inprogress": "In progress",

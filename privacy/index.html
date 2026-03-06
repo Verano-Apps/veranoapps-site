@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Política de Privacidade — Verano Apps</title>
+    <meta name="description" content="Política de Privacidade do Marmitrack — Verano Apps." />
+
+    <link rel="icon" type="image/png" href="../assets/favicon.png" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="container topbar__inner">
+            <a class="brand" href="/" aria-label="Verano Apps">
+                <img class="brand__logo" src="../assets/logo.png" alt="Verano Apps logo" />
+                <span class="brand__name">Verano Apps</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container" style="max-width: 760px;">
+                <div class="section__head">
+                    <h1 class="section__title" style="font-size: 32px;">Política de Privacidade</h1>
+                    <p class="section__subtitle">Marmitrack — Verano Apps</p>
+                </div>
+
+                <div class="card">
+                    <p class="card__text">
+                        Marmitrack não coleta, armazena ou compartilha dados pessoais dos usuários.
+                    </p>
+
+                    <p class="card__text" style="margin-top: 14px;">
+                        Todas as informações inseridas no aplicativo permanecem armazenadas apenas no dispositivo do
+                        usuário.
+                    </p>
+                </div>
+
+                <div style="margin-top: 18px;">
+                    <a class="link" href="/">← Voltar para o site</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <span class="muted">© <span id="year"></span> Verano Apps</span>
+            <span class="muted">Minimalista • Privado • Útil</span>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

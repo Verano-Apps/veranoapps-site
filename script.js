@@ -24,10 +24,10 @@ const I18N = {
         // NOVO: promessa técnica por app
         "apps.marmitrack.privacy": "Sem login. Sem anúncios. Sem coleta de dados.",
 
-        "apps.marmitrack.play": "Em breve na Google Play →",
+        "apps.marmitrack.play": "Disponível na Google Play →",
 
         "status.inprogress": "Em produção",
-        "status.published": "Publicado",
+        "status.published": "Online",
 
         "about.title": "Sobre",
         "about.subtitle":
@@ -72,10 +72,10 @@ const I18N = {
         // NOVO
         "apps.marmitrack.privacy": "No login. No ads. No data collection.",
 
-        "apps.marmitrack.play": "Coming soon to Google Play →",
+        "apps.marmitrack.play": "Available on Google Play →",
 
         "status.inprogress": "In progress",
-        "status.published": "Published",
+        "status.published": "Live",
 
         "about.title": "About",
         "about.subtitle":

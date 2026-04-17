@@ -66,6 +66,20 @@ function updateStatus(message, tone = "") {
     }
 }
 
+function resetExperience() {
+    state.selectedOption = "";
+    elements.selectedOptionLabel.textContent = "Aguardando seleção";
+    elements.notes.value = "";
+    updateStatus("");
+
+    elements.choiceButtons.forEach((button) => {
+        button.classList.remove("is-selected");
+    });
+
+    toggleModal(elements.successModal, false);
+    showStep("intro");
+}
+
 function hasEmailJsConfig() {
     return (
         EMAIL_CONFIG.publicKey &&
@@ -184,7 +198,7 @@ function registerEvents() {
     });
 
     elements.closeSuccessModal.addEventListener("click", () => {
-        toggleModal(elements.successModal, false);
+        resetExperience();
     });
 
     elements.backToIntro.addEventListener("click", () => {

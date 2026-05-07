@@ -7,8 +7,9 @@ const I18N = {
         "nav.contact": "Contato",
 
         "hero.kicker": "Estúdio independente",
-        "hero.title": "Apps minimalistas.\nFeitos com intenção.",
-        "hero.subtitle": "Produtos mobile focados em clareza, privacidade e utilidade.",
+        "hero.title": "Apps simples para problemas reais.",
+        "hero.subtitle":
+            "A Verano Apps cria produtos mobile claros, privados e úteis — começando por ferramentas do dia a dia.",
         "hero.ctaPrimary": "Ver apps",
         "hero.ctaSecondary": "Sobre a Verano",
 
@@ -16,10 +17,10 @@ const I18N = {
         "hero.note": "Privacidade por padrão. Clareza sempre. Sem ruído.",
 
         "apps.title": "Apps",
-        "apps.subtitle": "Produtos enxutos, consistentes e feitos para durar.",
+        "apps.subtitle": "Produtos pequenos, úteis e pensados para o uso real.",
         "apps.marmitrack.badge": "Android • Offline-first",
         "apps.marmitrack.desc":
-            "Controle alimentar minimalista com marmitas, metas e progresso diário — offline-first.",
+            "Controle alimentar simples, offline e privado — com marmitas, metas e progresso diário.",
 
         // NOVO: promessa técnica por app
         "apps.marmitrack.privacy": "Sem login. Sem anúncios. Sem coleta de dados.",
@@ -37,14 +38,14 @@ const I18N = {
 
         "about.title": "Sobre",
         "about.subtitle":
-            "Um estúdio solo construindo software claro, privado e consistente — com foco em produto.",
+            "Um estúdio independente criando aplicativos pequenos, bem cuidados e úteis no dia a dia.",
         "about.principles.title": "Princípios",
-        "about.principles.p1": "Minimalismo sem distrações",
+        "about.principles.p1": "Simplicidade antes de complexidade",
         "about.principles.p2": "Privacidade por padrão",
         "about.principles.p3": "Design limpo e funcional",
         "about.story.title": "História",
         "about.story.text":
-            "Verano Apps nasceu para criar ferramentas pessoais — simples, rápidas e sem “ruído”. O objetivo é construir um portfólio sólido de produtos reais, do zero ao lançamento.",
+            "A Verano Apps nasceu como um estúdio independente para criar aplicativos reais, simples e bem cuidados — do primeiro lançamento aos próximos produtos.",
 
         "contact.title": "Contato",
         "contact.subtitle": "Feedback e oportunidades são bem-vindos.",
@@ -61,8 +62,9 @@ const I18N = {
         "nav.contact": "Contact",
 
         "hero.kicker": "Independent app studio",
-        "hero.title": "Minimal apps.\nBuilt with intention.",
-        "hero.subtitle": "Mobile products focused on clarity, privacy, and usefulness.",
+        "hero.title": "Simple apps for real problems.",
+        "hero.subtitle":
+            "Verano Apps creates clear, private and useful mobile products — starting with everyday tools.",
         "hero.ctaPrimary": "View apps",
         "hero.ctaSecondary": "About Verano",
 
@@ -70,10 +72,10 @@ const I18N = {
         "hero.note": "Privacy by default. Always clear. No noise.",
 
         "apps.title": "Apps",
-        "apps.subtitle": "Focused products, consistent and built to last.",
+        "apps.subtitle": "Small, useful products designed for real use.",
         "apps.marmitrack.badge": "Android • Offline-first",
         "apps.marmitrack.desc":
-            "Minimal food tracking with meals, goals, and daily progress — offline-first.",
+            "Simple, offline and private food tracking — with meals, goals and daily progress.",
 
         // NOVO
         "apps.marmitrack.privacy": "No login. No ads. No data collection.",
@@ -91,14 +93,14 @@ const I18N = {
 
         "about.title": "About",
         "about.subtitle":
-            "A solo studio building clear, private, consistent software — product-first.",
+            "An independent studio creating small, thoughtful and useful apps for everyday life.",
         "about.principles.title": "Principles",
-        "about.principles.p1": "Minimalism without distractions",
+        "about.principles.p1": "Simplicity before complexity",
         "about.principles.p2": "Privacy by default",
         "about.principles.p3": "Clean, functional design",
         "about.story.title": "Story",
         "about.story.text":
-            "Verano Apps exists to build personal tools—simple, fast, and noise-free. The goal is to create a strong portfolio of real products, from zero to launch.",
+            "Verano Apps started as an independent studio to create real, simple and thoughtful apps — from the first launch to the next products.",
 
         "contact.title": "Contact",
         "contact.subtitle": "Feedback and opportunities are welcome.",

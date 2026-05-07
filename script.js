@@ -28,9 +28,9 @@ const I18N = {
         "apps.gestao.badge": "Android • Firebase • Freemium",
         "apps.gestao.title": "Verano Gestão",
         "apps.gestao.desc":
-            "Gestão simples para pequenos negócios: agenda, clientes, serviços e visão de rendimento.",
+            "Gestão simples para pequenos negócios: clientes, serviços, agenda e visão financeira em um só lugar.",
         "apps.gestao.details":
-            "Versão free e premium, com relatórios semanais e mensais em PDF.",
+            "Produto em evolução, pensado para rotina real, clareza e agilidade.",
 
         "status.inprogress": "Em produção",
         "status.published": "Online",
@@ -82,9 +82,9 @@ const I18N = {
         "apps.gestao.badge": "Android • Firebase • Freemium",
         "apps.gestao.title": "Verano Gestão",
         "apps.gestao.desc":
-            "Simple management for small businesses: scheduling, clients, services, and revenue tracking.",
+            "Simple management for small businesses: clients, services, scheduling, and financial clarity in one place.",
         "apps.gestao.details":
-            "Free and premium versions, with weekly and monthly PDF reports.",
+            "An evolving product designed for real routines, clarity, and speed.",
 
         "status.inprogress": "In progress",
         "status.published": "Live",

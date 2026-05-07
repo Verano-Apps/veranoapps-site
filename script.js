@@ -25,6 +25,12 @@ const I18N = {
         "apps.marmitrack.privacy": "Sem login. Sem anúncios. Sem coleta de dados.",
 
         "apps.marmitrack.play": "Disponível na Google Play →",
+        "apps.gestao.badge": "Android • Firebase • Freemium",
+        "apps.gestao.title": "Verano Gestão",
+        "apps.gestao.desc":
+            "Gestão simples para pequenos negócios: agenda, clientes, serviços e visão de rendimento.",
+        "apps.gestao.details":
+            "Versão free e premium, com relatórios semanais e mensais em PDF.",
 
         "status.inprogress": "Em produção",
         "status.published": "Online",
@@ -73,6 +79,12 @@ const I18N = {
         "apps.marmitrack.privacy": "No login. No ads. No data collection.",
 
         "apps.marmitrack.play": "Available on Google Play →",
+        "apps.gestao.badge": "Android • Firebase • Freemium",
+        "apps.gestao.title": "Verano Gestão",
+        "apps.gestao.desc":
+            "Simple management for small businesses: scheduling, clients, services, and revenue tracking.",
+        "apps.gestao.details":
+            "Free and premium versions, with weekly and monthly PDF reports.",
 
         "status.inprogress": "In progress",
         "status.published": "Live",

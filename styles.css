@@ -351,6 +351,12 @@ body {
     margin-top: 14px;
 }
 
+.apps__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+}
+
 .grid {
     display: grid;
     grid-template-columns: 1fr;

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exclusão de conta e dados — Verano Gestão</title>
+    <meta name="description"
+        content="Instruções para solicitar a exclusão de conta e dados do aplicativo Verano Gestão." />
+
+    <link rel="icon" type="image/png" href="../assets/favicon.png" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="container topbar__inner">
+            <a class="brand" href="/" aria-label="Verano Apps">
+                <img class="brand__logo" src="../assets/logo.png" alt="Verano Apps logo" />
+                <span class="brand__name">Verano Apps</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container" style="max-width: 760px;">
+                <div class="section__head">
+                    <h1 class="section__title" style="font-size: 30px;">Exclusão de conta e dados</h1>
+                    <p class="section__subtitle">Aplicativo: Verano Gestão</p>
+                </div>
+
+                <div class="card">
+                    <p class="card__text">
+                        Para solicitar a exclusão da sua conta e dos dados associados ao <strong>Verano
+                            Gestão</strong>, envie um e-mail para
+                        <a class="link" href="mailto:veranoapps@gmail.com">veranoapps@gmail.com</a> com o assunto
+                        “Exclusão de conta — Verano Gestão”.
+                    </p>
+
+                    <p class="card__text" style="margin-top: 14px;">
+                        No corpo do e-mail, informe o e-mail usado para acessar o app.
+                    </p>
+
+                    <section style="margin-top: 24px;">
+                        <h2 class="card__title">Dados que podem ser excluídos</h2>
+                        <ul class="list">
+                            <li>perfil da conta;</li>
+                            <li>clientes cadastrados;</li>
+                            <li>serviços cadastrados;</li>
+                            <li>agendamentos;</li>
+                            <li>lançamentos financeiros;</li>
+                            <li>observações;</li>
+                            <li>dados de vale-presente, quando houver.</li>
+                        </ul>
+                    </section>
+
+                    <p class="card__text" style="margin-top: 24px;">
+                        A solicitação será processada em até 30 dias.
+                    </p>
+
+                    <p class="card__text" style="margin-top: 14px;">
+                        Alguns dados poderão ser mantidos por mais tempo quando necessário para obrigações legais,
+                        segurança, prevenção de fraude ou resolução de problemas técnicos.
+                    </p>
+                </div>
+
+                <div style="margin-top: 18px;">
+                    <a class="link" href="/">← Voltar para o site</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <span class="muted">© <span id="year"></span> Verano Apps</span>
+            <span class="muted">Minimalista • Privado • Útil</span>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

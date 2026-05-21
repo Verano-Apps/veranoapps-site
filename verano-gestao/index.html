@@ -23,29 +23,47 @@
                 <span class="brand__name">Verano Apps</span>
             </a>
 
-            <a class="link subtle" href="/">Site principal</a>
+            <div class="topbar__actions">
+                <nav class="nav">
+                    <a class="link subtle" href="#recursos" data-i18n="gestao.nav.features">Recursos</a>
+                    <a class="link subtle" href="#privacidade" data-i18n="gestao.nav.privacy">Privacidade</a>
+                    <a class="link subtle" href="#contato" data-i18n="gestao.nav.contact">Contato</a>
+                </nav>
+
+                <div class="toggles">
+                    <button class="pill" id="themeToggle" type="button" aria-label="Toggle theme">
+                        <span class="pill__icon" aria-hidden="true">◐</span>
+                        <span class="pill__text" data-i18n="ui.theme">Tema</span>
+                    </button>
+
+                    <button class="pill" id="langToggle" type="button" aria-label="Toggle language">
+                        <span class="pill__icon pill__icon--lang" aria-hidden="true">Aa</span>
+                        <span class="pill__text" id="langPill">PT</span>
+                    </button>
+                </div>
+            </div>
         </div>
     </header>
 
-    <main>
+    <main id="top">
         <section class="hero product-hero">
             <div class="container">
-                <p class="kicker">Aplicativo Verano Apps</p>
+                <p class="kicker" data-i18n="gestao.hero.kicker">Aplicativo Verano Apps</p>
                 <h1 class="hero__title">Verano Gestão</h1>
-                <p class="hero__subtitle">
+                <p class="hero__subtitle" data-i18n="gestao.hero.subtitle">
                     Gestão simples para clientes, agenda, serviços e financeiro.
                 </p>
-                <p class="hero__subtitle product-hero__copy">
+                <p class="hero__subtitle product-hero__copy" data-i18n="gestao.hero.description">
                     O Verano Gestão é um app criado para profissionais autônomos e pequenos negócios organizarem a
                     rotina de atendimento em um só lugar.
                 </p>
-                <p class="hero__subtitle product-hero__copy">
+                <p class="hero__subtitle product-hero__copy" data-i18n="gestao.hero.details">
                     Com ele, é possível cadastrar clientes, serviços, agendamentos e acompanhar pagamentos de forma
                     simples, visual e direta.
                 </p>
                 <div class="hero__cta">
-                    <a class="btn" href="#recursos">O que o app faz</a>
-                    <a class="btn ghost" href="#privacidade">Privacidade e dados</a>
+                    <a class="btn" href="#recursos" data-i18n="gestao.hero.ctaFeatures">O que o app faz</a>
+                    <a class="btn ghost" href="#privacidade" data-i18n="gestao.hero.ctaPrivacy">Privacidade e dados</a>
                 </div>
             </div>
         </section>
@@ -53,8 +71,8 @@
         <section class="section" id="recursos">
             <div class="container">
                 <div class="section__head">
-                    <h2 class="section__title">O que o app faz</h2>
-                    <p class="section__subtitle">
+                    <h2 class="section__title" data-i18n="gestao.features.title">O que o app faz</h2>
+                    <p class="section__subtitle" data-i18n="gestao.features.subtitle">
                         O app ajuda a centralizar informações importantes da operação diária, reduzindo a dependência
                         de planilhas, anotações soltas e controles separados.
                     </p>
@@ -62,28 +80,28 @@
 
                 <div class="grid product-features">
                     <article class="card">
-                        <h3 class="card__title">Clientes</h3>
-                        <p class="card__text">Organize clientes, contatos e observações importantes.</p>
+                        <h3 class="card__title" data-i18n="gestao.features.clients.title">Clientes</h3>
+                        <p class="card__text" data-i18n="gestao.features.clients.text">Organize clientes, contatos e observações importantes.</p>
                     </article>
                     <article class="card">
-                        <h3 class="card__title">Serviços</h3>
-                        <p class="card__text">Cadastre serviços com duração, descrição e valor padrão.</p>
+                        <h3 class="card__title" data-i18n="gestao.features.services.title">Serviços</h3>
+                        <p class="card__text" data-i18n="gestao.features.services.text">Cadastre serviços com duração, descrição e valor padrão.</p>
                     </article>
                     <article class="card">
-                        <h3 class="card__title">Agenda</h3>
-                        <p class="card__text">Crie agendamentos com clientes salvos ou avulsos.</p>
+                        <h3 class="card__title" data-i18n="gestao.features.schedule.title">Agenda</h3>
+                        <p class="card__text" data-i18n="gestao.features.schedule.text">Crie agendamentos com clientes salvos ou avulsos.</p>
                     </article>
                     <article class="card">
-                        <h3 class="card__title">Financeiro</h3>
-                        <p class="card__text">Acompanhe valores previstos, recebidos e pagamentos pendentes.</p>
+                        <h3 class="card__title" data-i18n="gestao.features.finance.title">Financeiro</h3>
+                        <p class="card__text" data-i18n="gestao.features.finance.text">Acompanhe valores previstos, recebidos e pagamentos pendentes.</p>
                     </article>
                     <article class="card">
-                        <h3 class="card__title">Vale-presente</h3>
-                        <p class="card__text">Registre informações de presenteador e presenteado quando necessário.</p>
+                        <h3 class="card__title" data-i18n="gestao.features.gifts.title">Vale-presente</h3>
+                        <p class="card__text" data-i18n="gestao.features.gifts.text">Registre informações de presenteador e presenteado quando necessário.</p>
                     </article>
                     <article class="card">
-                        <h3 class="card__title">Notificações</h3>
-                        <p class="card__text">Receba lembretes e avisos importantes da rotina.</p>
+                        <h3 class="card__title" data-i18n="gestao.features.notifications.title">Notificações</h3>
+                        <p class="card__text" data-i18n="gestao.features.notifications.text">Receba lembretes e avisos importantes da rotina.</p>
                     </article>
                 </div>
             </div>
@@ -92,10 +110,10 @@
         <section class="section">
             <div class="container">
                 <div class="section__head">
-                    <h2 class="section__title">Para quem é</h2>
+                    <h2 class="section__title" data-i18n="gestao.audience.title">Para quem é</h2>
                 </div>
                 <div class="card product-copy">
-                    <p class="card__text">
+                    <p class="card__text" data-i18n="gestao.audience.text">
                         O Verano Gestão foi pensado para profissionais e pequenos negócios que trabalham com
                         atendimento marcado, como estética, beleza, bem-estar, consultorias, serviços personalizados e
                         outros negócios locais.
@@ -107,30 +125,30 @@
         <section class="section" id="privacidade">
             <div class="container">
                 <div class="section__head">
-                    <h2 class="section__title">Privacidade e dados</h2>
+                    <h2 class="section__title" data-i18n="gestao.privacy.title">Privacidade e dados</h2>
                 </div>
                 <div class="card product-copy">
-                    <p class="card__text">
+                    <p class="card__text" data-i18n="gestao.privacy.text">
                         O app utiliza autenticação e armazenamento em nuvem para manter os dados de cada usuário
                         separados e protegidos. A Verano Apps não vende dados pessoais dos usuários.
                     </p>
                     <div class="card__actions product-links">
-                        <a class="link" href="/verano-gestao/privacy/">Política de Privacidade</a>
-                        <a class="link" href="/verano-gestao/delete-account/">Exclusão de conta e dados</a>
+                        <a class="link" href="/verano-gestao/privacy/" data-i18n="gestao.links.privacy">Política de Privacidade</a>
+                        <a class="link" href="/verano-gestao/delete-account/" data-i18n="gestao.links.delete">Exclusão de conta e dados</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section">
+        <section class="section" id="contato">
             <div class="container">
                 <div class="grid product-info">
-                    <div>
+                    <div class="product-panel">
                         <div class="section__head">
-                            <h2 class="section__title">Contato</h2>
+                            <h2 class="section__title" data-i18n="gestao.contact.title">Contato</h2>
                         </div>
                         <div class="card product-copy">
-                            <p class="card__text">
+                            <p class="card__text" data-i18n="gestao.contact.text">
                                 Para dúvidas, suporte ou solicitações relacionadas ao app, entre em contato pelo e-mail:
                             </p>
                             <div class="card__actions">
@@ -139,12 +157,12 @@
                         </div>
                     </div>
 
-                    <div>
+                    <div class="product-panel">
                         <div class="section__head">
-                            <h2 class="section__title">Status</h2>
+                            <h2 class="section__title" data-i18n="gestao.status.title">Status</h2>
                         </div>
                         <div class="card product-copy">
-                            <p class="card__text">
+                            <p class="card__text" data-i18n="gestao.status.text">
                                 O Verano Gestão está em fase de testes e preparação para publicação na Google Play.
                             </p>
                         </div>
@@ -152,7 +170,7 @@
                 </div>
 
                 <div class="product-back">
-                    <a class="link" href="/">← Voltar para o site principal</a>
+                    <a class="link" href="/" data-i18n="gestao.links.back">← Voltar para o site principal</a>
                 </div>
             </div>
         </section>
@@ -162,16 +180,14 @@
         <div class="container footer__inner">
             <span class="muted">© <span id="year"></span> Verano Apps</span>
             <div class="footer__links">
-                <a class="link subtle" href="/verano-gestao/privacy/">Política de Privacidade</a>
-                <a class="link subtle" href="/verano-gestao/delete-account/">Exclusão de conta e dados</a>
-                <a class="link subtle" href="/">Site principal</a>
+                <a class="link subtle" href="/verano-gestao/privacy/" data-i18n="gestao.links.privacy">Política de Privacidade</a>
+                <a class="link subtle" href="/verano-gestao/delete-account/" data-i18n="gestao.links.delete">Exclusão de conta e dados</a>
+                <a class="link subtle" href="/" data-i18n="gestao.links.site">Site principal</a>
             </div>
         </div>
     </footer>
 
-    <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+    <script src="../script.js"></script>
 </body>
 
 </html>

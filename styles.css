@@ -359,8 +359,7 @@ body {
     margin-top: 10px;
 }
 
-.product-features .card,
-.product-copy {
+.product-features .card {
     height: 100%;
 }
 
@@ -373,6 +372,16 @@ body {
 
 .product-info {
     align-items: stretch;
+}
+
+.product-panel {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.product-panel .product-copy {
+    flex: 1;
 }
 
 .product-back {

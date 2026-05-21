@@ -33,6 +33,49 @@ const I18N = {
         "apps.gestao.details":
             "Produto em evolução, pensado para rotina real, clareza e agilidade.",
 
+        "gestao.nav.features": "Recursos",
+        "gestao.nav.privacy": "Privacidade",
+        "gestao.nav.contact": "Contato",
+        "gestao.hero.kicker": "Aplicativo Verano Apps",
+        "gestao.hero.subtitle": "Gestão simples para clientes, agenda, serviços e financeiro.",
+        "gestao.hero.description":
+            "O Verano Gestão é um app criado para profissionais autônomos e pequenos negócios organizarem a rotina de atendimento em um só lugar.",
+        "gestao.hero.details":
+            "Com ele, é possível cadastrar clientes, serviços, agendamentos e acompanhar pagamentos de forma simples, visual e direta.",
+        "gestao.hero.ctaFeatures": "O que o app faz",
+        "gestao.hero.ctaPrivacy": "Privacidade e dados",
+        "gestao.features.title": "O que o app faz",
+        "gestao.features.subtitle":
+            "O app ajuda a centralizar informações importantes da operação diária, reduzindo a dependência de planilhas, anotações soltas e controles separados.",
+        "gestao.features.clients.title": "Clientes",
+        "gestao.features.clients.text": "Organize clientes, contatos e observações importantes.",
+        "gestao.features.services.title": "Serviços",
+        "gestao.features.services.text": "Cadastre serviços com duração, descrição e valor padrão.",
+        "gestao.features.schedule.title": "Agenda",
+        "gestao.features.schedule.text": "Crie agendamentos com clientes salvos ou avulsos.",
+        "gestao.features.finance.title": "Financeiro",
+        "gestao.features.finance.text": "Acompanhe valores previstos, recebidos e pagamentos pendentes.",
+        "gestao.features.gifts.title": "Vale-presente",
+        "gestao.features.gifts.text": "Registre informações de presenteador e presenteado quando necessário.",
+        "gestao.features.notifications.title": "Notificações",
+        "gestao.features.notifications.text": "Receba lembretes e avisos importantes da rotina.",
+        "gestao.audience.title": "Para quem é",
+        "gestao.audience.text":
+            "O Verano Gestão foi pensado para profissionais e pequenos negócios que trabalham com atendimento marcado, como estética, beleza, bem-estar, consultorias, serviços personalizados e outros negócios locais.",
+        "gestao.privacy.title": "Privacidade e dados",
+        "gestao.privacy.text":
+            "O app utiliza autenticação e armazenamento em nuvem para manter os dados de cada usuário separados e protegidos. A Verano Apps não vende dados pessoais dos usuários.",
+        "gestao.contact.title": "Contato",
+        "gestao.contact.text":
+            "Para dúvidas, suporte ou solicitações relacionadas ao app, entre em contato pelo e-mail:",
+        "gestao.status.title": "Status",
+        "gestao.status.text":
+            "O Verano Gestão está em fase de testes e preparação para publicação na Google Play.",
+        "gestao.links.privacy": "Política de Privacidade",
+        "gestao.links.delete": "Exclusão de conta e dados",
+        "gestao.links.back": "← Voltar para o site principal",
+        "gestao.links.site": "Site principal",
+
         "status.inprogress": "Em produção",
         "status.published": "Online",
 
@@ -87,6 +130,49 @@ const I18N = {
             "Simple management for small businesses: clients, services, scheduling, and financial clarity in one place.",
         "apps.gestao.details":
             "An evolving product designed for real routines, clarity, and speed.",
+
+        "gestao.nav.features": "Features",
+        "gestao.nav.privacy": "Privacy",
+        "gestao.nav.contact": "Contact",
+        "gestao.hero.kicker": "Verano Apps app",
+        "gestao.hero.subtitle": "Simple management for clients, scheduling, services, and finances.",
+        "gestao.hero.description":
+            "Verano Gestão is an app built for independent professionals and small businesses to organize their service routine in one place.",
+        "gestao.hero.details":
+            "With it, you can register clients, services, appointments, and track payments in a simple, visual, and direct way.",
+        "gestao.hero.ctaFeatures": "What the app does",
+        "gestao.hero.ctaPrivacy": "Privacy and data",
+        "gestao.features.title": "What the app does",
+        "gestao.features.subtitle":
+            "The app helps centralize important daily operation information, reducing the need for spreadsheets, loose notes, and separate controls.",
+        "gestao.features.clients.title": "Clients",
+        "gestao.features.clients.text": "Organize clients, contacts, and important notes.",
+        "gestao.features.services.title": "Services",
+        "gestao.features.services.text": "Register services with duration, description, and default price.",
+        "gestao.features.schedule.title": "Schedule",
+        "gestao.features.schedule.text": "Create appointments with saved or one-time clients.",
+        "gestao.features.finance.title": "Finances",
+        "gestao.features.finance.text": "Track expected amounts, received amounts, and pending payments.",
+        "gestao.features.gifts.title": "Gift vouchers",
+        "gestao.features.gifts.text": "Record giver and recipient information when needed.",
+        "gestao.features.notifications.title": "Notifications",
+        "gestao.features.notifications.text": "Receive reminders and important routine alerts.",
+        "gestao.audience.title": "Who it is for",
+        "gestao.audience.text":
+            "Verano Gestão is designed for professionals and small businesses with scheduled services, such as beauty, wellness, consulting, personalized services, and other local businesses.",
+        "gestao.privacy.title": "Privacy and data",
+        "gestao.privacy.text":
+            "The app uses authentication and cloud storage to keep each user's data separated and protected. Verano Apps does not sell users' personal data.",
+        "gestao.contact.title": "Contact",
+        "gestao.contact.text":
+            "For questions, support, or requests related to the app, contact us by email:",
+        "gestao.status.title": "Status",
+        "gestao.status.text":
+            "Verano Gestão is in testing and preparing for publication on Google Play.",
+        "gestao.links.privacy": "Privacy Policy",
+        "gestao.links.delete": "Account and data deletion",
+        "gestao.links.back": "← Back to the main site",
+        "gestao.links.site": "Main site",
 
         "status.inprogress": "In progress",
         "status.published": "Live",

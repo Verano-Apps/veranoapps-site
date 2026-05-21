@@ -351,6 +351,34 @@ body {
     margin-top: 14px;
 }
 
+.product-hero {
+    padding-bottom: 24px;
+}
+
+.product-hero__copy {
+    margin-top: 10px;
+}
+
+.product-features .card,
+.product-copy {
+    height: 100%;
+}
+
+.product-links,
+.footer__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 18px;
+}
+
+.product-info {
+    align-items: stretch;
+}
+
+.product-back {
+    margin-top: 18px;
+}
+
 .apps__list {
     display: grid;
     grid-template-columns: 1fr;

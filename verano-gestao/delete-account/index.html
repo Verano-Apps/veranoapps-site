@@ -22,59 +22,78 @@
                 <img class="brand__logo" src="../../assets/logo.png" alt="Verano Apps logo" />
                 <span class="brand__name">Verano Apps</span>
             </a>
+
+            <div class="topbar__actions">
+                <nav class="nav">
+                    <a class="link subtle" href="/verano-gestao/#recursos" data-i18n="gestao.nav.features">Recursos</a>
+                    <a class="link subtle" href="/verano-gestao/#privacidade" data-i18n="gestao.nav.privacy">Privacidade</a>
+                    <a class="link subtle" href="/verano-gestao/#contato" data-i18n="gestao.nav.contact">Contato</a>
+                </nav>
+
+                <div class="toggles">
+                    <button class="pill" id="themeToggle" type="button" aria-label="Toggle theme">
+                        <span class="pill__icon" aria-hidden="true">◐</span>
+                        <span class="pill__text" data-i18n="ui.theme">Tema</span>
+                    </button>
+
+                    <button class="pill" id="langToggle" type="button" aria-label="Toggle language">
+                        <span class="pill__icon pill__icon--lang" aria-hidden="true">Aa</span>
+                        <span class="pill__text" id="langPill">PT</span>
+                    </button>
+                </div>
+            </div>
         </div>
     </header>
 
-    <main>
+    <main id="top">
         <section class="section">
             <div class="container" style="max-width: 760px;">
                 <div class="section__head">
-                    <h1 class="section__title" style="font-size: 30px;">Exclusão de conta e dados</h1>
-                    <p class="section__subtitle">Aplicativo: Verano Gestão</p>
+                    <h1 class="section__title" style="font-size: 30px;" data-i18n="gestao.delete.title">Exclusão de conta e dados</h1>
+                    <p class="section__subtitle" data-i18n="gestao.legal.app">Aplicativo: Verano Gestão</p>
                 </div>
 
                 <div class="card">
                     <p class="card__text">
-                        Para solicitar a exclusão da sua conta e dos dados associados ao <strong>Verano
-                            Gestão</strong>, envie um e-mail para
-                        <a class="link" href="mailto:veranoapps@gmail.com">veranoapps@gmail.com</a> com o assunto
-                        “Exclusão de conta — Verano Gestão”.
+                        <span data-i18n="gestao.delete.intro">Para solicitar a exclusão da sua conta e dos dados associados ao Verano Gestão, envie um e-mail para</span>
+                        <a class="link" href="mailto:veranoapps@gmail.com">veranoapps@gmail.com</a>
+                        <span data-i18n="gestao.delete.subject">com o assunto “Exclusão de conta — Verano Gestão”.</span>
                     </p>
 
-                    <p class="card__text" style="margin-top: 14px;">
+                    <p class="card__text" style="margin-top: 14px;" data-i18n="gestao.delete.accessEmail">
                         No corpo do e-mail, informe o e-mail usado para acessar o app.
                     </p>
 
-                    <p class="card__text" style="margin-top: 14px;">
+                    <p class="card__text" style="margin-top: 14px;" data-i18n="gestao.delete.partial">
                         Você também pode solicitar a exclusão de alguns dados específicos sem excluir sua conta. Para
                         isso, informe no e-mail quais dados deseja remover.
                     </p>
 
                     <section style="margin-top: 24px;">
-                        <h2 class="card__title">Dados que podem ser excluídos</h2>
+                        <h2 class="card__title" data-i18n="gestao.delete.dataTitle">Dados que podem ser excluídos</h2>
                         <ul class="list">
-                            <li>perfil da conta;</li>
-                            <li>clientes cadastrados;</li>
-                            <li>serviços cadastrados;</li>
-                            <li>agendamentos;</li>
-                            <li>lançamentos financeiros;</li>
-                            <li>observações;</li>
-                            <li>dados de vale-presente, quando houver.</li>
+                            <li data-i18n="gestao.delete.data.profile">perfil da conta;</li>
+                            <li data-i18n="gestao.delete.data.clients">clientes cadastrados;</li>
+                            <li data-i18n="gestao.delete.data.services">serviços cadastrados;</li>
+                            <li data-i18n="gestao.delete.data.appointments">agendamentos;</li>
+                            <li data-i18n="gestao.delete.data.finance">lançamentos financeiros;</li>
+                            <li data-i18n="gestao.delete.data.notes">observações;</li>
+                            <li data-i18n="gestao.delete.data.gifts">dados de vale-presente, quando houver.</li>
                         </ul>
                     </section>
 
-                    <p class="card__text" style="margin-top: 24px;">
+                    <p class="card__text" style="margin-top: 24px;" data-i18n="gestao.delete.timing">
                         A solicitação será processada em até 30 dias.
                     </p>
 
-                    <p class="card__text" style="margin-top: 14px;">
+                    <p class="card__text" style="margin-top: 14px;" data-i18n="gestao.delete.retention">
                         Alguns dados poderão ser mantidos por mais tempo quando necessário para obrigações legais,
                         segurança, prevenção de fraude ou resolução de problemas técnicos.
                     </p>
                 </div>
 
                 <div style="margin-top: 18px;">
-                    <a class="link" href="/verano-gestao/">← Voltar para Verano Gestão</a>
+                    <a class="link" href="/verano-gestao/" data-i18n="gestao.legal.back">← Voltar para Verano Gestão</a>
                 </div>
             </div>
         </section>
@@ -84,16 +103,14 @@
         <div class="container footer__inner">
             <span class="muted">© <span id="year"></span> Verano Apps</span>
             <div class="footer__links">
-                <a class="link subtle" href="/verano-gestao/privacy/">Política de Privacidade</a>
-                <a class="link subtle" href="/verano-gestao/delete-account/">Exclusão de conta e dados</a>
-                <a class="link subtle" href="/">Site principal</a>
+                <a class="link subtle" href="/verano-gestao/privacy/" data-i18n="gestao.links.privacy">Política de Privacidade</a>
+                <a class="link subtle" href="/verano-gestao/delete-account/" data-i18n="gestao.links.delete">Exclusão de conta e dados</a>
+                <a class="link subtle" href="/" data-i18n="gestao.links.site">Site principal</a>
             </div>
         </div>
     </footer>
 
-    <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+    <script src="../../script.js"></script>
 </body>
 
 </html>

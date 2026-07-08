@@ -47,7 +47,7 @@
   const EMAILJS_CONFIG = {
     publicKey: "1Lqg-FDTIhZLQWX_7",
     serviceId: "service_0ncum9q",
-    templateId: "yetw15q",
+    templateId: "template_w68y7sy",
     replyTo: "pedroah498@gmail.com",
   };
 

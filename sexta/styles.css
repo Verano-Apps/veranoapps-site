@@ -1,0 +1,333 @@
+/* =========================================================
+   Missão: Primeiro Rolê — estilos
+   Organização:
+   1. Tokens (variáveis)
+   2. Base / reset leve
+   3. Fundo animado
+   4. Barra de progresso
+   5. Estrutura de telas (screens)
+   6. Cards e tipografia
+   7. Botões e opções
+   8. Confetes / feedback
+   9. Animações
+   10. Responsivo
+   ========================================================= */
+
+/* 1. Tokens ---------------------------------------------- */
+:root {
+  --bg-1: #0a0a0a;   /* preto        */
+  --bg-2: #141414;   /* grafite      */
+  --accent: #fafafa;  /* branco (destaque neutro) */
+  --accent-2: #a3a3a3; /* cinza claro  */
+  --accent-3: #737373; /* cinza médio  */
+  --text: #f5f5f5;
+  --text-dim: #8a8a8a;
+  --card: rgba(255, 255, 255, 0.03);
+  --card-brd: rgba(255, 255, 255, 0.08);
+  --radius: 22px;
+  --radius-sm: 14px;
+  --shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* 2. Base ------------------------------------------------ */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body { height: 100%; }
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  color: var(--text);
+  background: radial-gradient(130% 120% at 50% -10%, var(--bg-2), var(--bg-1) 65%);
+  min-height: 100dvh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+}
+
+img { max-width: 100%; display: block; }
+
+/* 3. Fundo animado -------------------------------------- */
+.bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.06;
+  animation: float 22s var(--ease) infinite alternate;
+}
+.blob--1 { width: 46vmax; height: 46vmax; background: #ffffff; top: -16vmax; left: -14vmax; }
+.blob--2 { width: 38vmax; height: 38vmax; background: #ffffff; bottom: -18vmax; right: -12vmax; opacity: 0.04; animation-delay: -6s; }
+.blob--3 { width: 24vmax; height: 24vmax; background: #ffffff; top: 45%; left: 58%; opacity: 0.03; animation-delay: -11s; }
+
+/* 4. Barra de progresso --------------------------------- */
+.topbar {
+  padding: 22px 16px 4px;
+  display: flex;
+  justify-content: center;
+}
+.progress {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.progress__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.22);
+  transition: all 0.4s var(--ease);
+}
+.progress__dot.is-active {
+  background: var(--accent);
+  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.1);
+  transform: scale(1.15);
+}
+.progress__line {
+  width: 34px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* 5. Telas ----------------------------------------------- */
+.stage {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  padding: 24px 18px 40px;
+  width: 100%;
+}
+.screen {
+  display: none;
+  width: 100%;
+  max-width: 460px;
+  animation: screen-in 0.55s var(--ease) both;
+}
+.screen.is-active { display: block; }
+
+/* 6. Cards e tipografia --------------------------------- */
+.card {
+  background: var(--card);
+  border: 1px solid var(--card-brd);
+  border-radius: var(--radius);
+  padding: 30px 26px 26px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  position: relative;
+  overflow: hidden;
+}
+.card--center { text-align: center; }
+
+.eyebrow {
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.title {
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  font-size: clamp(1.7rem, 6vw, 2.2rem);
+  line-height: 1.18;
+  margin-bottom: 12px;
+}
+.title--sm { font-size: clamp(1.35rem, 5vw, 1.7rem); }
+.subtitle {
+  color: var(--text-dim);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 22px;
+}
+.hint {
+  margin-top: 16px;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  opacity: 0.8;
+}
+
+.gif {
+  border-radius: var(--radius-sm);
+  margin: 0 auto 18px;
+  display: block;
+  width: 100%;               /* ocupa a largura do card...          */
+  height: auto;              /* ...mantendo a proporção original     */
+  object-fit: contain;       /* mostra o gif inteiro, sem cortar     */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+/* limites pra não ficar exagerado no desktop nem minúsculo */
+.gif--sm { max-width: 300px; }
+.gif--md { max-width: 360px; }
+
+/* 7. Botões e opções ------------------------------------ */
+.btn {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 1.02rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 999px;
+  padding: 14px 26px;
+  cursor: pointer;
+  transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease), background 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn:active { transform: scale(0.96); }
+.btn--primary {
+  color: #0a0a0a;
+  background: var(--accent);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+.btn--primary:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45); }
+.btn--ghost {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--card-brd);
+}
+.btn--ghost:hover { background: rgba(255, 255, 255, 0.14); }
+.btn__arrow { transition: transform 0.2s var(--ease); }
+.btn--primary:hover .btn__arrow { transform: translateX(4px); }
+
+.btn-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: stretch;
+}
+
+.link-back {
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin: 18px auto 0;
+  display: block;
+  padding: 6px 10px;
+  transition: color 0.2s;
+}
+.link-back:hover { color: var(--text); }
+
+/* opções */
+.stack__head { text-align: center; margin-bottom: 20px; }
+.options { display: flex; flex-direction: column; gap: 14px; }
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-align: left;
+  background: var(--card);
+  border: 1px solid var(--card-brd);
+  border-radius: var(--radius-sm);
+  padding: 16px 16px;
+  cursor: pointer;
+  color: var(--text);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform 0.25s var(--ease), border-color 0.25s, background 0.25s;
+  animation: option-in 0.5s var(--ease) both;
+}
+.option:nth-child(1) { animation-delay: 0.05s; }
+.option:nth-child(2) { animation-delay: 0.13s; }
+.option:nth-child(3) { animation-delay: 0.21s; }
+.option:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.05);
+}
+.option:active { transform: scale(0.98); }
+.option__emoji {
+  font-size: 1.9rem;
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+}
+.option__body { flex: 1; display: flex; flex-direction: column; gap: 3px; }
+.option__name { font-family: "Inter", system-ui, sans-serif; font-weight: 600; font-size: 1.12rem; }
+.option__where { font-size: 0.78rem; color: var(--text-dim); font-weight: 600; }
+.option__desc { font-size: 0.9rem; color: var(--text-dim); line-height: 1.4; margin-top: 4px; }
+.option__go {
+  font-size: 1.3rem;
+  color: var(--text-dim);
+  flex-shrink: 0;
+  transition: transform 0.25s var(--ease), color 0.25s;
+}
+.option:hover .option__go { transform: translateX(4px); color: var(--text); }
+.gif--sm, .gif--md { border: 1px solid var(--card-brd); }
+
+/* 8. Confetes / feedback -------------------------------- */
+.status {
+  min-height: 22px;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  margin-top: 6px;
+}
+.status.is-ok { color: var(--text); }
+.status.is-err { color: var(--text-dim); }
+
+.confetti { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.confetti span {
+  position: absolute;
+  top: -12px;
+  width: 9px;
+  height: 14px;
+  border-radius: 2px;
+  opacity: 0.9;
+  animation: fall linear forwards;
+}
+
+/* 9. Animações ------------------------------------------ */
+@keyframes float {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(4vmax, 3vmax) scale(1.08); }
+}
+@keyframes screen-in {
+  from { opacity: 0; transform: translateY(16px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes option-in {
+  from { opacity: 0; transform: translateX(-14px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes fall {
+  to { transform: translateY(120%) rotate(540deg); opacity: 0; }
+}
+@keyframes pop {
+  0% { transform: scale(0.6); }
+  60% { transform: scale(1.12); }
+  100% { transform: scale(1); }
+}
+.pop { animation: pop 0.5s var(--ease); }
+
+/* Respeita quem prefere menos movimento */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* 10. Responsivo ---------------------------------------- */
+@media (min-width: 420px) {
+  .btn-row { flex-direction: row; justify-content: center; }
+}
+@media (max-width: 360px) {
+  .card { padding: 24px 18px; }
+  .option__desc { font-size: 0.85rem; }
+}

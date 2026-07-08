@@ -44,8 +44,20 @@
     },
   };
 
-  /* Endpoint do backend (a ser implementado depois) */
-  const ENDPOINT = "/api/escolha-role";
+  const EMAILJS_CONFIG = {
+    publicKey: "1Lqg-FDTIhZLQWX_7",
+    serviceId: "service_0ncum9q",
+    templateId: "yetw15q",
+    replyTo: "pedroah498@gmail.com",
+  };
+
+  const isEmailConfigured =
+    EMAILJS_CONFIG.publicKey !== "COLE_SUA_PUBLIC_KEY_AQUI" &&
+    window.emailjs;
+
+  if (isEmailConfigured) {
+    emailjs.init({ publicKey: EMAILJS_CONFIG.publicKey });
+  }
 
   /* -------------------------------------------------------
      2. Referências de DOM
@@ -111,31 +123,39 @@
     sendChoice(currentChoice);
   }
 
-  /* Chamada HTTP preparada — o backend deve receber e enviar o e-mail.
-     Não implementa o servidor; apenas dispara a requisição. */
   async function sendChoice(opt) {
-    setStatus("enviando sua escolha…", "");
+    if (!isEmailConfigured) {
+      console.warn("EmailJS ainda nao configurado. Preencha EMAILJS_CONFIG.publicKey.");
+      setStatus("", "");
+      return;
+    }
 
-    const payload = {
-      choice: opt.id,
-      label: opt.label,
-      local: opt.local,
-      // timestamp gerado no cliente; o backend pode reescrever se preferir
-      chosenAt: new Date().toISOString(),
+    setStatus("enviando sua escolha...", "");
+
+    const chosenAt = new Date();
+    const templateParams = {
+      subject: "Escolha do role: " + opt.label,
+      selected_option: opt.label,
+      selected_place: opt.local,
+      selected_id: opt.id,
+      selected_message: opt.done,
+      chosen_at: chosenAt.toLocaleString("pt-BR", {
+        dateStyle: "short",
+        timeStyle: "short",
+      }),
+      page_url: window.location.href,
+      reply_to: EMAILJS_CONFIG.replyTo,
     };
 
     try {
-      const res = await fetch(ENDPOINT, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
+      await emailjs.send(
+        EMAILJS_CONFIG.serviceId,
+        EMAILJS_CONFIG.templateId,
+        templateParams
+      );
 
-      if (!res.ok) throw new Error("HTTP " + res.status);
-
-      setStatus("escolha salva com sucesso ✨", "is-ok");
+      setStatus("escolha enviada com sucesso", "is-ok");
     } catch (err) {
-      // Não trava a experiência dela — só registra o erro pra você.
       console.error("Falha ao enviar a escolha:", err);
       setStatus("", "");
     }

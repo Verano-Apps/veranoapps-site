@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Missão: te fazer rir</title>
+  <meta name="description" content="Uma missão de escolha simples: bora escolher nosso primeiro rolê?" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/sexta/styles.css" />
+</head>
+<body>
+  <!-- Fundo animado -->
+  <div class="bg" aria-hidden="true">
+    <span class="blob blob--1"></span>
+    <span class="blob blob--2"></span>
+    <span class="blob blob--3"></span>
+  </div>
+
+  <!-- Barra de progresso da "missão" -->
+  <header class="topbar" aria-hidden="true">
+    <div class="progress">
+      <span class="progress__dot is-active" data-step="1"></span>
+      <span class="progress__line"></span>
+      <span class="progress__dot" data-step="2"></span>
+      <span class="progress__line"></span>
+      <span class="progress__dot" data-step="3"></span>
+    </div>
+  </header>
+
+  <main class="stage">
+
+    <!-- ETAPA 1 — Intro -->
+    <section class="screen is-active" id="screen-intro" data-step="1">
+      <div class="card card--center">
+        <img class="gif gif--sm" src="/sexta/hi.gif" alt="Oi!" />
+        <h1 class="title">Achei uns lugares pra gente ir, vê qual você mais curte.</h1>
+        <p class="subtitle">
+          Qualquer um deles tu pode chamar teus amigos ou amigas se vc quiser.
+        </p>
+        <button class="btn btn--primary" data-action="start">
+          Aceitar convite <span class="btn__arrow">→</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ETAPA 2 — Opções -->
+    <section class="screen" id="screen-options" data-step="2">
+      <div class="stack">
+        <header class="stack__head">
+          <h2 class="title title--sm">As três opções</h2>
+          <p class="subtitle">Qual você prefere?</p>
+        </header>
+
+        <div class="options">
+          <button class="option" data-choice="boho">
+            <span class="option__emoji">🍸</span>
+            <span class="option__body"> 
+              <span class="option__name">Bohô Bar &amp; Pista</span>
+              <span class="option__where">Centro de Floripa</span>
+              <span class="option__desc">
+                Um bar mais tranquilo, drinks e música de leve, bom pra conversar.
+              </span>
+            </span>
+            <span class="option__go">→</span>
+          </button>
+
+          <button class="option" data-choice="desgosto">
+            <span class="option__emoji">🎶</span>
+            <span class="option__body">
+              <span class="option__name">Desgosto</span>
+              <span class="option__where">Centro de Floripa</span>
+              <span class="option__desc">
+                Esse eu acho que é o mais animado, bebida e funk tocando.
+              </span>
+            </span>
+            <span class="option__go">→</span>
+          </button>
+
+          <button class="option" data-choice="sinuca">
+            <span class="option__emoji">🎱</span>
+            <span class="option__body">
+              <span class="option__name">Midnight Club</span>
+              <span class="option__where">Sinuca · Trindade</span>
+              <span class="option__desc">
+                Se você acha que consegue me vencer na sinuca, testa a sorte aqui.
+              </span>
+            </span>
+            <span class="option__go">→</span>
+          </button>
+        </div>
+
+        <button class="link-back" data-action="back-to-intro">← voltar</button>
+      </div>
+    </section>
+
+    <!-- ETAPA 3 — Confirmação (dinâmica por opção) -->
+    <section class="screen" id="screen-confirm" data-step="3">
+      <div class="card card--center">
+        <img class="gif gif--md" id="confirm-gif" src="" alt="" />
+        <p class="eyebrow" id="confirm-tag">Boa escolha</p>
+        <h2 class="title title--sm" id="confirm-title">É esse mesmo?</h2>
+        <p class="subtitle" id="confirm-desc"></p>
+        <div class="btn-row">
+          <button class="btn btn--ghost" data-action="back-to-options">
+            deixa eu ver os outros
+          </button>
+          <button class="btn btn--primary" data-action="confirm">
+            É esse! <span class="btn__arrow">→</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ETAPA FINAL — Confirmado -->
+    <section class="screen" id="screen-done" data-step="4">
+      <div class="card card--center">
+        <div class="confetti" id="confetti" aria-hidden="true"></div>
+        <img class="gif gif--md" src="/sexta/tevejo.gif" alt="Te vejo lá!" />
+        <p class="eyebrow">Combinado ✅</p>
+        <h2 class="title title--sm">Fechou, então é isso!</h2>
+        <p class="subtitle" id="done-desc"></p>
+
+        <div class="status" id="send-status" role="status" aria-live="polite"></div>
+
+        <button class="btn btn--ghost" data-action="restart">← voltar ao início</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="/sexta/script.js"></script>
+</body>
+</html>

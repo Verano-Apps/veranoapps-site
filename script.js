@@ -32,7 +32,7 @@ const I18N = {
             "Gestão simples para pequenos negócios: clientes, serviços, agenda e visão financeira em um só lugar.",
         "apps.gestao.details":
             "Produto em evolução, pensado para rotina real, clareza e agilidade.",
-        "apps.gestao.play": "Baixar na Google Play",
+        "apps.gestao.play": "Disponível na Google Play →",
 
         "gestao.nav.features": "Recursos",
         "gestao.nav.privacy": "Privacidade",
@@ -43,7 +43,7 @@ const I18N = {
             "O Verano Gestão é um app criado para profissionais autônomos e pequenos negócios organizarem a rotina de atendimento em um só lugar.",
         "gestao.hero.details":
             "Com ele, é possível cadastrar clientes, serviços, agendamentos e acompanhar pagamentos de forma simples, visual e direta.",
-        "gestao.hero.ctaPlay": "Baixar na Google Play",
+        "gestao.hero.ctaPlay": "Disponível na Google Play →",
         "gestao.hero.ctaFeatures": "O que o app faz",
         "gestao.hero.ctaPrivacy": "Privacidade e dados",
         "gestao.features.title": "O que o app faz",
@@ -312,7 +312,7 @@ const I18N = {
             "Simple management for small businesses: clients, services, scheduling, and financial clarity in one place.",
         "apps.gestao.details":
             "An evolving product designed for real routines, clarity, and speed.",
-        "apps.gestao.play": "Get it on Google Play",
+        "apps.gestao.play": "Available on Google Play →",
 
         "gestao.nav.features": "Features",
         "gestao.nav.privacy": "Privacy",
@@ -323,7 +323,7 @@ const I18N = {
             "Verano Gestão is an app built for independent professionals and small businesses to organize their service routine in one place.",
         "gestao.hero.details":
             "With it, you can register clients, services, appointments, and track payments in a simple, visual, and direct way.",
-        "gestao.hero.ctaPlay": "Get it on Google Play",
+        "gestao.hero.ctaPlay": "Available on Google Play →",
         "gestao.hero.ctaFeatures": "What the app does",
         "gestao.hero.ctaPrivacy": "Privacy and data",
         "gestao.features.title": "What the app does",

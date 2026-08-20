@@ -26,7 +26,7 @@ const I18N = {
         "apps.marmitrack.privacy": "Sem login. Sem anúncios. Sem coleta de dados.",
 
         "apps.marmitrack.play": "Disponível na Google Play →",
-        "apps.gestao.badge": "Android • Firebase • Freemium",
+        "apps.gestao.badge": "Android • Firebase",
         "apps.gestao.title": "Verano Gestão",
         "apps.gestao.desc":
             "Gestão simples para pequenos negócios: clientes, serviços, agenda e visão financeira em um só lugar.",
@@ -70,7 +70,7 @@ const I18N = {
             "Para dúvidas, suporte ou solicitações relacionadas ao app, entre em contato pelo e-mail:",
         "gestao.status.title": "Status",
         "gestao.status.text":
-            "O Verano Gestão está em fase de testes e preparação para publicação na Google Play.",
+            "O Verano Gestão está em produção e disponível para uso.",
         "gestao.links.privacy": "Política de Privacidade",
         "gestao.links.delete": "Exclusão de conta e dados",
         "gestao.links.back": "← Voltar para o site principal",
@@ -257,6 +257,7 @@ const I18N = {
         "gestao.policy.contact.site": "Site:",
 
         "status.inprogress": "Em produção",
+        "status.production": "Em produção",
         "status.published": "Online",
 
         "about.title": "Sobre",
@@ -304,7 +305,7 @@ const I18N = {
         "apps.marmitrack.privacy": "No login. No ads. No data collection.",
 
         "apps.marmitrack.play": "Available on Google Play →",
-        "apps.gestao.badge": "Android • Firebase • Freemium",
+        "apps.gestao.badge": "Android • Firebase",
         "apps.gestao.title": "Verano Gestão",
         "apps.gestao.desc":
             "Simple management for small businesses: clients, services, scheduling, and financial clarity in one place.",
@@ -348,7 +349,7 @@ const I18N = {
             "For questions, support, or requests related to the app, contact us by email:",
         "gestao.status.title": "Status",
         "gestao.status.text":
-            "Verano Gestão is in testing and preparing for publication on Google Play.",
+            "Verano Gestão is in production and available for use.",
         "gestao.links.privacy": "Privacy Policy",
         "gestao.links.delete": "Account and data deletion",
         "gestao.links.back": "← Back to the main site",
@@ -534,6 +535,7 @@ const I18N = {
         "gestao.policy.contact.site": "Site:",
 
         "status.inprogress": "In progress",
+        "status.production": "In production",
         "status.published": "Live",
 
         "about.title": "About",

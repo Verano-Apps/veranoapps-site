@@ -70,7 +70,7 @@ const I18N = {
             "Para dúvidas, suporte ou solicitações relacionadas ao app, entre em contato pelo e-mail:",
         "gestao.status.title": "Status",
         "gestao.status.text":
-            "O Verano Gestão está em produção e disponível para uso.",
+            "O Verano Gestão está online e disponível para uso.",
         "gestao.links.privacy": "Política de Privacidade",
         "gestao.links.delete": "Exclusão de conta e dados",
         "gestao.links.back": "← Voltar para o site principal",
@@ -257,7 +257,6 @@ const I18N = {
         "gestao.policy.contact.site": "Site:",
 
         "status.inprogress": "Em produção",
-        "status.production": "Em produção",
         "status.published": "Online",
 
         "about.title": "Sobre",
@@ -349,7 +348,7 @@ const I18N = {
             "For questions, support, or requests related to the app, contact us by email:",
         "gestao.status.title": "Status",
         "gestao.status.text":
-            "Verano Gestão is in production and available for use.",
+            "Verano Gestão is online and available for use.",
         "gestao.links.privacy": "Privacy Policy",
         "gestao.links.delete": "Account and data deletion",
         "gestao.links.back": "← Back to the main site",
@@ -535,7 +534,6 @@ const I18N = {
         "gestao.policy.contact.site": "Site:",
 
         "status.inprogress": "In progress",
-        "status.production": "In production",
         "status.published": "Live",
 
         "about.title": "About",
